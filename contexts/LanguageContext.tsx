@@ -127,6 +127,18 @@ const translations: Translations = {
   'cta.readMore': { lt: 'Skaityti daugiau', en: 'Read More' },
   'cta.viewAll': { lt: 'Peržiūrėti visus', en: 'View All' },
   'cta.backToHome': { lt: 'Grįžti į pagrindinį', en: 'Back to Home' },
+
+  // Resources
+  'nav.resources': { lt: 'Ištekliai', en: 'Resources' },
+  'resources.title': { lt: 'Nemokami Ištekliai', en: 'Free Resources' },
+  'resources.subtitle': { 
+    lt: 'Atsisiųskite nemokamus šablonus, gaires ir įrankius, kurie padės jums kurti puikius projektus.', 
+    en: 'Download free templates, guides, and tools to help you create amazing projects.' 
+  },
+  'resources.search': { lt: 'Ieškoti išteklių...', en: 'Search resources...' },
+  'resources.download': { lt: 'Atsisiųsti', en: 'Download' },
+  'resources.noResults': { lt: 'Išteklių nerasta', en: 'No resources found' },
+  'resources.empty': { lt: 'Išteklių dar nėra. Patikrinkite vėliau!', en: 'No resources yet. Check back later!' },
 };
 
 interface LanguageContextType {

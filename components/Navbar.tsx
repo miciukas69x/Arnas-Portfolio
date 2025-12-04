@@ -34,6 +34,7 @@ export default function Navbar() {
     { href: '/testimonials', label: t('nav.testimonials') },
     { href: '/case-studies', label: t('nav.caseStudies') },
     { href: '/services', label: t('nav.services') },
+    { href: '/resources', label: t('nav.resources') },
   ], [t]);
 
   return (
@@ -43,11 +44,11 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="fixed top-2 sm:top-4 left-0 right-0 z-50 flex justify-center px-3 sm:px-4"
     >
-      <div className={`glass rounded-full px-3 sm:px-6 py-2 sm:py-3 flex items-center gap-3 sm:gap-6 md:gap-8 transition-all duration-300 w-full sm:w-auto max-w-full sm:max-w-none ${
+      <div className={`glass px-3 sm:px-6 py-2 sm:py-3 flex items-center gap-3 sm:gap-6 md:gap-8 transition-all duration-300 w-full sm:w-auto max-w-full sm:max-w-none relative ${
         isScrolled ? 'bg-card/90' : ''
       }`}>
-        {/* Logo */}
-        <Link href="/" className="font-display text-lg sm:text-xl font-bold text-foreground flex-shrink-0">
+        {/* Logo with blur - Left side */}
+        <Link href="/" className="font-display text-lg sm:text-xl font-bold text-foreground flex-shrink-0 backdrop-blur-sm bg-background/30 px-3 py-1.5 rounded-md">
           A<span className="text-primary">rnas</span>
         </Link>
 
@@ -92,9 +93,9 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - Right Side */}
         <button
-          className="md:hidden text-foreground p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+          className="md:hidden text-foreground p-2 min-w-[44px] min-h-[44px] flex items-center justify-center absolute right-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -102,14 +103,27 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Full Width Top */}
       {isMobileMenuOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          className="md:hidden glass rounded-2xl mt-2 p-4 sm:p-6 w-full"
+          exit={{ opacity: 0, y: -100 }}
+          className="md:hidden fixed top-0 left-0 right-0 w-full backdrop-blur-md bg-background/95 border-b border-border/50 p-4 sm:p-6 z-50"
         >
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-display text-lg font-bold">
+              {language === 'lt' ? 'Meniu' : 'Menu'}
+            </h2>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="h-10 w-10"
+            >
+              <X size={20} />
+            </Button>
+          </div>
           <div className="flex flex-col gap-3 sm:gap-4">
             {navItems.map((item) => (
               <Link

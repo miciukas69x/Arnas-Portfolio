@@ -26,8 +26,8 @@ export default function ServicesSection() {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
 
-  // Show only first 2 services on mobile, all on desktop
-  const displayedServices = isMobile ? services.slice(0, 2) : services;
+  // Show only first 2 services on mobile, first 4 on desktop
+  const displayedServices = isMobile ? services.slice(0, 2) : services.slice(0, 4);
 
   return (
     <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">

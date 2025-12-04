@@ -7,6 +7,7 @@ import StorySection from '@/components/sections/StorySection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import ResourcesSection from '@/components/sections/ResourcesSection';
 import BookCallSection from '@/components/sections/BookCallSection';
 import Footer from '@/components/Footer';
 
@@ -21,6 +22,7 @@ export default function Home() {
         <TestimonialsSection />
         <CaseStudiesSection />
         <ServicesSection />
+        <ResourcesSection />
         <BookCallSection />
       </main>
       <Footer />

@@ -87,7 +87,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.3, ease: 'easeOut' }}
-        className="mt-4 sm:mt-12 md:mt-16 w-full max-w-4xl aspect-video rounded-xl sm:rounded-2xl glass overflow-hidden hover-glow mx-4"
+        className="mt-8 sm:mt-12 md:mt-16 w-full max-w-4xl aspect-video rounded-xl sm:rounded-2xl glass overflow-hidden hover-glow mx-4"
       >
         <div className="w-full h-full bg-gradient-to-br from-muted/50 to-card flex items-center justify-center">
           <div className="text-center">

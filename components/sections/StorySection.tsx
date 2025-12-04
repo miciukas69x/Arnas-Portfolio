@@ -61,9 +61,9 @@ export default function StorySection() {
             </h2>
 
             <div className="space-y-4 sm:space-y-6 text-muted-foreground">
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere">{t('story.p1')}</p>
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere">{t('story.p2')}</p>
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere">{t('story.p3')}</p>
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere line-clamp-3 sm:line-clamp-none">{t('story.p1')}</p>
+              <p className="hidden sm:block text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere">{t('story.p2')}</p>
+              <p className="hidden sm:block text-sm sm:text-base md:text-lg leading-relaxed break-words overflow-wrap-anywhere">{t('story.p3')}</p>
             </div>
 
             {/* Skills Marquee */}

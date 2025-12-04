@@ -7,12 +7,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { projects } from '@/data/projects';
-
-// Only show first 2 projects on the index page
-const caseStudies = projects.slice(0, 2);
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export default function CaseStudiesSection() {
   const { language, t } = useLanguage();
+  const isMobile = useIsMobile();
+
+  // Show only first 1 project on mobile, first 2 on desktop
+  const caseStudies = isMobile ? projects.slice(0, 1) : projects.slice(0, 2);
 
   return (
     <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
